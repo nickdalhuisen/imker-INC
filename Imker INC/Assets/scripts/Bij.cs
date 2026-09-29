@@ -8,28 +8,49 @@ public class Bij : MonoBehaviour
     [SerializeField] GameObject ExtractPoint;
     public bool HoneyReady;
     [SerializeField] bool WabenFound;
+    float Previousx = 0;
+    float Timer = 0;
+    SpriteRenderer Sprite;
     void Start()
     {
         HoneyReady = false;
         WabenFound = false;
+        Sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
+        
         if (HoneyReady == true)
         {
             Target = ExtractPoint;
-
         }
         
+        Timer += Time.deltaTime;
+        if(Timer > 0.05f)
+        {
+          Previousx = transform.position.x;
+          Timer = 0;
+        }
+        float MovementSide = transform.position.x - Previousx;
+
+        if (MovementSide > 0.001f)
+        {
+            Sprite.flipX = false;
+        }
+        else if (MovementSide < -0.001f)
+        {
+           Sprite.flipX = true;
+        }
     }
-    void FixedUpdate()
+        void FixedUpdate()
     {
         if(Target != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, Target.gameObject.transform.position ,BijSpeed );
         }
 
+        if(Target == null) { return; }
         if(Vector2.Distance(transform.position, Target.transform.position) < 0.1 && !HoneyReady )
         {
           var WabenScript = Target.GetComponent<Waben>();

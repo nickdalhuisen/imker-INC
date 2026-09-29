@@ -1,9 +1,16 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public float Honey;
     public static GameManager instance;
+    [SerializeField] TextMeshProUGUI HoneyCount;
+    [SerializeField] float Money;
+    [SerializeField] TextMeshProUGUI MoneyCount;
+    public bool IsCoverting;
+
+
     [SerializeField] GameObject Row1;
     [SerializeField] GameObject WabenPrefab;
     [SerializeField] GameObject BeePrefab;
@@ -19,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        IsCoverting = false;
         currentRow = 1;
         if (instance != null && instance != this)
         {
@@ -34,7 +42,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        HoneyCount.text = "Honey  " + Honey;
+        MoneyCount.text = "$  " + Money;
+        if (IsCoverting)
+        {
+            ConvertHoney();
+        }
     }
 
     public void SpawnWaben()
@@ -67,11 +80,15 @@ public class GameManager : MonoBehaviour
     }
     public void SpawnBee()
     {
-        Debug.Log("bij");
+       
         if (BeeAmount < WabenAmount)
         {
             Instantiate(BeePrefab, BeeSpawn.transform.position, Quaternion.identity);
             BeeAmount += 1;
         }
+    }
+    public void ConvertHoney()
+    {
+
     }
 }
