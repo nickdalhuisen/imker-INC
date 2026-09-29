@@ -7,7 +7,7 @@ public class Bij : MonoBehaviour
     [SerializeField] float BijSpeed;
     [SerializeField] GameObject ExtractPoint;
     public bool HoneyReady;
-    bool WabenFound;
+    [SerializeField] bool WabenFound;
     void Start()
     {
         HoneyReady = false;
@@ -58,6 +58,7 @@ public class Bij : MonoBehaviour
                 Target = other.gameObject;
                 ClosestWabenScript.IsFree = false;
                 WabenFound = true;
+                ClosestWabenScript.Bij = gameObject;
             }
         }
         if(other.gameObject.CompareTag("Extract"))

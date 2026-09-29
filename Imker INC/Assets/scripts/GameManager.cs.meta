@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: ee044682ae2567d478ce5203dcec8cee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Row1: {instanceID: 0}
+  - WabenPrefab: {fileID: 2324895188844478191, guid: 311ba90125ee45f468fe509ea99f32e5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

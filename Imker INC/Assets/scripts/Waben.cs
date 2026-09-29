@@ -5,7 +5,7 @@ public class Waben : MonoBehaviour
     public bool IsFree;
     [SerializeField] float HoneyTime;
     float Timer = 0;
-    GameObject Bij;
+   [SerializeField] public GameObject Bij;
 
     void Start()
     {
@@ -29,13 +29,8 @@ public class Waben : MonoBehaviour
             BijScript.HoneyReady = true;
             IsFree = true;
             Timer = 0;
+            Bij = null;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Bij"))
-        {
-            Bij = other.gameObject;
-        }
-    }
+  
 }
