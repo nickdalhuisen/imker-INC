@@ -19,7 +19,7 @@ public class Waben : MonoBehaviour
     }
     public void MakeHoney()
     {
-        
+        IsFree = false;
 
         Timer += Time.deltaTime;
         if(Timer >= HoneyTime)
@@ -27,6 +27,7 @@ public class Waben : MonoBehaviour
             var BijScript = Bij.GetComponent<Bij>();
             BijScript.Target = null;
             BijScript.HoneyReady = true;
+            IsFree = true;
             Timer = 0;
         }
     }
