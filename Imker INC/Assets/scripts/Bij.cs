@@ -61,7 +61,7 @@ public class Bij : MonoBehaviour
                 ClosestWabenScript.Bij = gameObject;
             }
         }
-        if(other.gameObject.CompareTag("Extract"))
+        if(other.gameObject.CompareTag("Extract") && ExtractPoint == null )
         {
             ExtractPoint = other.gameObject;
         }
