@@ -12,4 +12,6 @@ public class Skill : ScriptableObject
 
     public SkillType Type;
 
+    public int amount;
+
 }

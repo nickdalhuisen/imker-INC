@@ -211,66 +211,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &9054993730836598335
-PrefabInstance:
+--- !u!1 &174127846
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174127848}
+  - component: {fileID: 174127847}
+  m_Layer: 0
+  m_Name: SkillTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &174127847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174127846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba2e4e2bf6efa047bf608baf4bfe8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTree
+  skillTypes:
+  - name: Damage
+    skills:
+    - {fileID: 11400000, guid: ef2583de7cb55936f93e1ab2ac6f3eaf, type: 2}
+    - {fileID: 11400000, guid: b8dd7b2c5edd2faeea8c900b24a8962d, type: 2}
+    - {fileID: 11400000, guid: 40c0867ad253bd47d9b8a4098d70bc1b, type: 2}
+    - {fileID: 11400000, guid: 40c0867ad253bd47d9b8a4098d70bc1b, type: 2}
+  SkillButton: {fileID: 2324895188844478191, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
+  offset: 2.3
+--- !u!4 &174127848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174127846}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2324895188844478191, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_Name
-      value: WabenSkill
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.00409
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.40454
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057555717450942645, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2651dbdc1e9aa91d887c8791ea4aa462, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.34, y: -0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1864956}
-  - {fileID: 9054993730836598335}
+  - {fileID: 174127848}
