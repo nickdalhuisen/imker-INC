@@ -8,11 +8,12 @@ TagManager:
   - Extract
   - Bij
   - Row1
+  - background
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - background
   - Water
   - UI
   - 
@@ -44,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 4095410767
     locked: 0
   m_RenderingLayers:
   - Default

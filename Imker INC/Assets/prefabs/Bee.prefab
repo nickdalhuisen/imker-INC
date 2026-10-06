@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 865537830128990746}
   - component: {fileID: 7864872092111396272}
   - component: {fileID: 7073275904052487232}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bee
   m_TagString: Bij
   m_Icon: {fileID: 0}
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -199556529
+  m_SortingLayer: 1
   m_SortingOrder: 500
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1604871212121561233, guid: 2cc840183f805b7458bb2ef83d3a0a53, type: 3}

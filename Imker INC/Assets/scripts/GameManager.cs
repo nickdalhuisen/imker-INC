@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI HoneyCount;
     [SerializeField] float Money;
     [SerializeField] TextMeshProUGUI MoneyCount;
-    public bool IsCoverting;
-
+    public bool IsConverting;
+    float ConvertTimer;
+    [SerializeField] Image ImageFill;
 
     [SerializeField] GameObject Row1;
     [SerializeField] GameObject WabenPrefab;
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        IsCoverting = false;
+        IsConverting = false;
         currentRow = 1;
         if (instance != null && instance != this)
         {
@@ -42,10 +44,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        HoneyCount.text = "Honey  " + Honey;
-        MoneyCount.text = "$  " + Money;
-        if (IsCoverting)
+        HoneyCount.text = "" + Honey;
+        MoneyCount.text = "" + Money;
+        if (IsConverting)
         {
+            ImageFill.fillAmount = ConvertTimer / 10;
             ConvertHoney();
         }
     }
@@ -89,6 +92,13 @@ public class GameManager : MonoBehaviour
     }
     public void ConvertHoney()
     {
+        ConvertTimer += Time.deltaTime;
+        if(ConvertTimer > 10)
+        {
+            Honey -= 1;
+            Money += 1;
+            ConvertTimer = 0;
+        }
 
     }
 }
